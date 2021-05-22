@@ -61,6 +61,7 @@ app.post("/",function(req,res){
         res.render("home",{locs: [parsedData.location.lon, parsedData.location.lat], data: weatherData})
     })
 });
-app.listen(3000,()=>{
+const port=process.env.PORT || 3000;
+app.listen(port,()=>{
     console.log("Server started!");
 })
